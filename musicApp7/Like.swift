@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Like {
+    var id: Int
+    var user: User
+    
+//    init(like: NSDictionary) {
+//        self.id = like.objectForKey("id") as Int
+//        self.user = User(user: like.objectForKey("user") as NSDictionary)
+//    }
+    
+    init(json: JSON) {
+        self.id = json["id"].intValue
+        self.user = User(json: json["user"])
+    }
+    
+}

@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+class Party {
+    let id: Int
+    let name: String
+    let user: User?
+    var requests: [Request] = []
+    
+    init(party: JSON) {
+        self.id = party["id"].intValue
+        self.name = party["name"].stringValue
+        
+        if party["user"] != nil {
+            //self.user = User(tempUser)
+            self.user = User(json: party["user"])
+        }
+        
+        if let tempRequest = party["requests"].array {
+            println("requests")
+            for request in tempRequest {
+                self.requests.append(Request(json: request))
+            }
+        }
+ 
+    }
+}

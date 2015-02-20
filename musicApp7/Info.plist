@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>FacebookAppID</key>
+	<string>1417458451820697</string>
+	<key>FacebookDisplayName</key>
+	<string>Music</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -35,6 +39,19 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>URL types</key>
+	<array>
+		<dict>
+			<key>URL Schemes
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;array/&gt;
+&lt;/plist&gt;
+</key>
+			<array/>
+			<key>item0</key>
+			<string>fb1417458451820697</string>
+		</dict>
 	</array>
 </dict>
 </plist>
