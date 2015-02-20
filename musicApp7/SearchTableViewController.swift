@@ -98,19 +98,8 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
             (request, response, json, error) in
         
             let jsonValue = JSON(json!)
-        
-            Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(self.party.id)").responseJSON {
-                (request, response, json, error) in
-                let jsonValue = JSON(json!)
-                let requestsJson = jsonValue["party"]["requests"]
-                self.party.requests = []
-                if let requestsArray = requestsJson.array {
-                    for request in requestsArray {
-                        self.party.requests.append(Request(json: request))
-                    }
-                    self.navigationController?.popViewControllerAnimated(true)
-                }
-            }
+            self.party.requests.append(Request(json: jsonValue["request"]))
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
