@@ -98,7 +98,6 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
             (request, response, json, error) in
         
             let jsonValue = JSON(json!)
-            println(response)
         
             Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(self.party.id)").responseJSON {
                 (request, response, json, error) in

@@ -47,6 +47,7 @@ class PlayerView: UIView {
     }
     
     func onStop() {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "AVPlayerItemDidPlayToEndTimeNotification", object: nil)
         delegate?.onStop()
     }
     

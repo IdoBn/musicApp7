@@ -100,11 +100,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eds-0U-y8E" customClass="PlayerView" customModule="musicApp7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="220"/>
-                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="236"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-bl-Loa">
+                                        <rect key="frame" x="282" y="99" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="TmT-bl-Loa" secondAttribute="centerY" constant="0.5" id="Ndj-EE-wJL"/>
+                                    <constraint firstAttribute="centerX" secondItem="TmT-bl-Loa" secondAttribute="centerX" constant="-0.5" id="cbF-h1-1IY"/>
+                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xnH-og-2Jz">
-                                <rect key="frame" x="0.0" y="292" width="600" height="259"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xnH-og-2Jz">
+                                <rect key="frame" x="0.0" y="300" width="600" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="requestCell" textLabel="BOt-j1-ZKk" detailTextLabel="e8v-II-Cr7" style="IBUITableViewCellStyleSubtitle" id="eii-fA-1rK">
@@ -137,18 +146,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xnH-og-2Jz" secondAttribute="trailing" id="6I2-vG-KBK"/>
+                            <constraint firstItem="Eds-0U-y8E" firstAttribute="top" secondItem="QZb-3Q-oc7" secondAttribute="bottom" id="22D-ON-zF7"/>
+                            <constraint firstItem="xnH-og-2Jz" firstAttribute="top" secondItem="Eds-0U-y8E" secondAttribute="bottom" id="3Gd-wz-Eat"/>
                             <constraint firstItem="xnH-og-2Jz" firstAttribute="top" secondItem="Eds-0U-y8E" secondAttribute="bottom" constant="8" symbolic="YES" id="Eps-l3-ZIN"/>
                             <constraint firstItem="Eds-0U-y8E" firstAttribute="top" secondItem="QZb-3Q-oc7" secondAttribute="bottom" id="HeH-KE-xP5"/>
-                            <constraint firstItem="xnH-og-2Jz" firstAttribute="leading" secondItem="Eds-0U-y8E" secondAttribute="leading" id="VAq-ak-Dym"/>
+                            <constraint firstItem="xnH-og-2Jz" firstAttribute="bottom" secondItem="8Wz-v9-ILt" secondAttribute="top" id="TXy-Fz-bP8"/>
                             <constraint firstItem="Eds-0U-y8E" firstAttribute="leading" secondItem="xnH-og-2Jz" secondAttribute="leading" id="Y3r-D0-yer"/>
+                            <constraint firstAttribute="bottom" secondItem="Eds-0U-y8E" secondAttribute="bottom" constant="300" id="YZ6-nR-xW7"/>
+                            <constraint firstItem="xnH-og-2Jz" firstAttribute="leading" secondItem="Eds-0U-y8E" secondAttribute="leading" id="ZBk-yt-OUJ"/>
                             <constraint firstItem="Eds-0U-y8E" firstAttribute="trailing" secondItem="xnH-og-2Jz" secondAttribute="trailing" id="adc-vn-2zx"/>
-                            <constraint firstItem="xnH-og-2Jz" firstAttribute="bottom" secondItem="8Wz-v9-ILt" secondAttribute="top" id="dDQ-Gh-yFr"/>
-                            <constraint firstItem="xnH-og-2Jz" firstAttribute="trailing" secondItem="Eds-0U-y8E" secondAttribute="trailing" id="f2t-Ed-yDc"/>
-                            <constraint firstItem="xnH-og-2Jz" firstAttribute="leading" secondItem="Ib1-Rm-vOs" secondAttribute="leading" id="hlh-Wp-C4B"/>
+                            <constraint firstAttribute="trailing" secondItem="xnH-og-2Jz" secondAttribute="trailing" id="gVJ-gu-mcG"/>
+                            <constraint firstItem="xnH-og-2Jz" firstAttribute="leading" secondItem="Ib1-Rm-vOs" secondAttribute="leading" id="hjF-fZ-ycL"/>
                             <constraint firstAttribute="bottom" secondItem="Eds-0U-y8E" secondAttribute="bottom" constant="316" id="lLS-Op-9rv"/>
-                            <constraint firstAttribute="bottom" secondItem="Eds-0U-y8E" secondAttribute="bottom" constant="316" id="pm9-6A-yp2"/>
-                            <constraint firstItem="Eds-0U-y8E" firstAttribute="top" secondItem="QZb-3Q-oc7" secondAttribute="bottom" id="pnE-ds-GFN"/>
+                            <constraint firstItem="xnH-og-2Jz" firstAttribute="trailing" secondItem="Eds-0U-y8E" secondAttribute="trailing" id="nfw-bj-mq3"/>
                             <constraint firstItem="xnH-og-2Jz" firstAttribute="top" secondItem="Eds-0U-y8E" secondAttribute="bottom" constant="8" symbolic="YES" id="zXi-mG-8TT"/>
                         </constraints>
                         <variation key="default">
@@ -157,6 +167,7 @@
                                 <exclude reference="Y3r-D0-yer"/>
                                 <exclude reference="adc-vn-2zx"/>
                                 <exclude reference="lLS-Op-9rv"/>
+                                <exclude reference="Eps-l3-ZIN"/>
                                 <exclude reference="zXi-mG-8TT"/>
                             </mask>
                         </variation>
@@ -164,6 +175,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityMonitor" destination="TmT-bl-Loa" id="OCI-7a-By2"/>
                         <outlet property="playerView" destination="Eds-0U-y8E" id="5Iu-Pn-RQj"/>
                         <outlet property="tableView" destination="xnH-og-2Jz" id="DpE-tr-XRX"/>
                         <segue destination="RVA-W4-GYa" kind="show" identifier="showSearch" id="F5D-xr-ET7"/>

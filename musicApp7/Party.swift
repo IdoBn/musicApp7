@@ -24,7 +24,6 @@ class Party {
         }
         
         if let tempRequest = party["requests"].array {
-            println("requests")
             for request in tempRequest {
                 self.requests.append(Request(json: request))
             }
