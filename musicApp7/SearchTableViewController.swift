@@ -15,17 +15,34 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
     var user: User!
     var party: Party!
     var searchResults = [Request]()
+    var spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    
+    /*
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.frame = CGRectMake(0, 0, 24, 24);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryView = spinner;
+    [spinner startAnimating];
+    [spinner release];
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Search"
         
+        // setup spinner
+        let center = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidX(view.bounds))
+        spinner.frame = CGRectMake(center.x - 25, center.y - 25, 50, 50)
+        spinner.color = UIColor.grayColor()
+        self.view.addSubview(spinner)
+        
         // Do any additional setup after loading the view.
         setUp("vevo")
     }
     
     func setUp(text: String) {
+        spinner.startAnimating()
         Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(self.party.id)/search", parameters: ["songpull": text]).responseJSON {
             (request, response, json, error) in
             let jsonValue = JSON(json!)
@@ -44,6 +61,7 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
                 }
                 
                 //println(jsonValue)
+                self.spinner.stopAnimating()
                 self.tableView.reloadData()
                 self.searchDisplayController!.searchResultsTableView.reloadData()
             }
@@ -94,12 +112,15 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
             "user_access_token": self.user.accessToken!
         ]
         
+        spinner.startAnimating()
+        
         Alamofire.request(.POST, "\(URLS.music.rawValue)/requests", parameters: params).responseJSON {
             (request, response, json, error) in
         
             let jsonValue = JSON(json!)
             self.party.requests.append(Request(json: jsonValue["request"]))
             self.navigationController?.popViewControllerAnimated(true)
+            self.spinner.stopAnimating()
         }
     }
     

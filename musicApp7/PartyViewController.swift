@@ -10,10 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJson
 
-protocol SetUpAble {
-    func setUp()
-}
-
 class PartyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayerViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -179,6 +175,13 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let searchVC = segue.destinationViewController as SearchTableViewController
                 searchVC.user = self.user
                 searchVC.party = self.party
+            case "showRequest":
+                let requestVC = segue.destinationViewController  as RequestTableViewController
+                let selectedIndex = self.tableView.indexPathForCell(sender as UITableViewCell)
+                if let index = selectedIndex?.row {
+                    requestVC.user = self.user
+                    requestVC.request = self.party!.requests[index]
+                }
             default:
                 break
             }

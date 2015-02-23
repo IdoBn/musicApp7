@@ -102,15 +102,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eds-0U-y8E" customClass="PlayerView" customModule="musicApp7" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="236"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-bl-Loa">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-bl-Loa">
                                         <rect key="frame" x="282" y="99" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="TmT-bl-Loa" secondAttribute="centerY" constant="0.5" id="32T-xK-LTC"/>
                                     <constraint firstAttribute="centerY" secondItem="TmT-bl-Loa" secondAttribute="centerY" constant="0.5" id="Ndj-EE-wJL"/>
+                                    <constraint firstAttribute="centerX" secondItem="TmT-bl-Loa" secondAttribute="centerX" constant="-0.5" id="ap2-yY-G6O"/>
                                     <constraint firstAttribute="centerX" secondItem="TmT-bl-Loa" secondAttribute="centerX" constant="-0.5" id="cbF-h1-1IY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ndj-EE-wJL"/>
+                                        <exclude reference="cbF-h1-1IY"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xnH-og-2Jz">
                                 <rect key="frame" x="0.0" y="300" width="600" height="256"/>
@@ -136,6 +144,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="C6q-we-sJx" kind="show" identifier="showRequest" id="BQW-0J-CjW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -184,6 +195,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M07-sk-YWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510" y="-400"/>
+        </scene>
+        <!--Request Table View Controller-->
+        <scene sceneID="Vjh-du-beK">
+            <objects>
+                <tableViewController id="C6q-we-sJx" customClass="RequestTableViewController" customModule="musicApp7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="tHd-Ym-u9y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="88" id="29A-Dl-uFg">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="29A-Dl-uFg" id="Fvb-d1-o5W">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="likeCell" textLabel="7ks-XQ-8ex" rowHeight="60" style="IBUITableViewCellStyleDefault" id="wKi-lz-zUy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wKi-lz-zUy" id="4qf-mr-Tid">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ks-XQ-8ex">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C6q-we-sJx" id="tmf-Nk-p1k"/>
+                            <outlet property="delegate" destination="C6q-we-sJx" id="oKD-qv-qj3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKU-Wg-xXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3199" y="-400"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="hHs-hD-0xf">
@@ -243,7 +296,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3188" y="-400"/>
+            <point key="canvasLocation" x="2515" y="-1096"/>
         </scene>
         <!--Item-->
         <scene sceneID="2NP-2S-IID">
