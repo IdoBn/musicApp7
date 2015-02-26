@@ -38,8 +38,7 @@ class PlayerView: UIView {
                     }
                     
                     self.playerController.player.play()
-                
-                    
+                            
                     NSNotificationCenter.defaultCenter().addObserver(self, selector: "onStop", name: "AVPlayerItemDidPlayToEndTimeNotification", object: nil)
                 }
             }

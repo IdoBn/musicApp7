@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJson
+import AVFoundation
+import AVKit
 
 class PartyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayerViewDelegate {
 
@@ -40,9 +42,15 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.refreshControl = refreshControl
         
         // activity monitor
+        activityMonitor.color = UIColor.blackColor()
         activityMonitor.startAnimating()
         
         setUp()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        playerView?.playerController.player?.pause()
     }
     
     func setUp() {
@@ -78,23 +86,27 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: - PlayerVew
     
     func onStop() {
-        if let request = self.party?.requests.first {
-            Alamofire.request(.PATCH, "\(URLS.music.rawValue)/requests/\(request.id)/played", parameters: ["user_access_token": user!.accessToken!]).responseJSON {
-                (request, response, json, error) in
+        let currentTime = playerView.playerController.player.currentTime() as CMTime
+        let duration = playerView.playerController.player.currentItem.duration as CMTime
+        if currentTime.timescale == duration.timescale {
+            if let request = self.party?.requests.first {
+                Alamofire.request(.PATCH, "\(URLS.music.rawValue)/requests/\(request.id)/played", parameters: ["user_access_token": user!.accessToken!]).responseJSON {
+                    (request, response, json, error) in
                     if json != nil {
                         let jsonValue = JSON(json!)
-                        println("on stop nil value = \(jsonValue)")
+                        //println("on stop nil value = \(jsonValue)")
                     }
-                
+                    
                     if self.party?.requests.first != nil {
                         let indexPath = NSIndexPath(forItem: 0, inSection: 0)
                         self.party?.requests.removeAtIndex(indexPath.row)
-                        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                        self.tableView?.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                     }
-                
+                    
                     if self.party?.requests.first != nil {
                         self.playerView.reDraw()
                     }
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 class RequestTableViewController: UITableViewController {
 
     var request: Request!
-    var user: User!
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class RequestTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 3
         } else {
             return self.request.likes.count
         }
@@ -52,14 +52,19 @@ class RequestTableViewController: UITableViewController {
                 return cell
             }
             
-            cell.imageView?.image = request.user!.thumbnail
-            cell.imageView?.layer.cornerRadius = 25
-            cell.imageView?.layer.masksToBounds = true
-            //cell.imageView?.frame = CGRectMake(cell.imageView?.frame.origin.x, cell.imageView?.frame.origin.y, 100, 100)
+            if indexPath.row == 0 {
+                cell.imageView?.image = request.user!.thumbnail
+                cell.imageView?.layer.cornerRadius = 25
+                cell.imageView?.layer.masksToBounds = true
+                //cell.imageView?.frame = CGRectMake(cell.imageView?.frame.origin.x, cell.imageView?.frame.origin.y, 100, 100)
+                
+                cell.textLabel?.text = request.user!.name
+                cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                
+                return cell
+            }
             
-            cell.textLabel?.text = request.user!.name
-            cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
-            
+            cell.textLabel?.text = "Play: \(request.title)"
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("likeCell", forIndexPath: indexPath) as UITableViewCell
@@ -87,9 +92,18 @@ class RequestTableViewController: UITableViewController {
         case 0:
             return "Uploaded By"
         case 1:
-            return "Voted By"
+            if request.likes.count > 0 {
+                return "Voted By"
+            }
+            return ""
         default:
             return ""
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && indexPath.row == 2 {
+            self.performSegueWithIdentifier("showPlayer", sender: nil)
         }
     }
     
@@ -128,14 +142,22 @@ class RequestTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "showPlayer":
+                let previewPlayerVC = segue.destinationViewController as PreviewPlayerViewController
+                previewPlayerVC.songUrl = request.url
+                previewPlayerVC.title = request.title
+            default:
+                break
+            }
+        }
     }
-    */
 
 }

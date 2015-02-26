@@ -42,11 +42,13 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
                 "access_token": FBSession.activeSession().accessTokenData.accessToken,
                 "expires_in": FBSession.activeSession().accessTokenData.expirationDate
                 ]).responseJSON { (request, response, json, error) in
-                    let userJSON = JSON(json!)
-                    //println(userJSON)
-                    let userObj = User(json: userJSON)
-                    self.performSegueWithIdentifier("showMyParties", sender: userObj)
-                    //println(userJSON["name"])
+                    if json != nil {
+                        let userJSON = JSON(json!)
+                        //println(userJSON)
+                        let userObj = User(json: userJSON)
+                        self.performSegueWithIdentifier("showMyParties", sender: userObj)
+                        //println(userJSON["name"])
+                    }
             }
             count++
         }

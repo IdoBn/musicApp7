@@ -34,7 +34,7 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
         // setup spinner
         let center = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidX(view.bounds))
         spinner.frame = CGRectMake(center.x - 25, center.y - 25, 50, 50)
-        spinner.color = UIColor.grayColor()
+        spinner.color = UIColor.blackColor()
         self.view.addSubview(spinner)
         
         // Do any additional setup after loading the view.

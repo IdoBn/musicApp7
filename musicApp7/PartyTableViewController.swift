@@ -25,7 +25,13 @@ class PartyTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        setUp()
+        //setUp()
+        
+        // refresh
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("setUp"), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl = refreshControl
+
     }
     
     func setUp() {
@@ -33,23 +39,14 @@ class PartyTableViewController: UITableViewController {
             Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(partyId)").responseJSON {
                 (request, response, json, error) in
                 let jsonValue = JSON(json!)
-                let requestsJson = jsonValue["party"]["requests"]
-                self.party?.requests = []
-                if let requestsArray = requestsJson.array {
-                    for request in requestsArray {
-                        self.party?.requests.append(Request(json: request))
-                    }
-                }
+                self.party = Party(party: jsonValue["party"])
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
         
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -76,6 +73,8 @@ class PartyTableViewController: UITableViewController {
             cell.imageView?.image = request.thumbnail
             // title
             cell.textLabel!.text = request.title
+            // subtitle
+            cell.detailTextLabel?.text = request.user?.name
         }
         
         return cell
@@ -117,13 +116,24 @@ class PartyTableViewController: UITableViewController {
     }
     */
     
-    /*
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+                case "showRequest":
+                let selectedIndex = self.tableView.indexPathForCell(sender as UITableViewCell)
+                if let index = selectedIndex?.row {
+                    let requestVC = segue.destinationViewController as RequestTableViewController
+                    requestVC.user = self.user
+                    requestVC.request = self.party!.requests[index]
+                }
+            default:
+                break
+            }
+        }
     }
-    */
 }

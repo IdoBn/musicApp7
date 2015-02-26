@@ -17,6 +17,8 @@
 		0065AB841A92606F000D9848 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0065AB831A92606F000D9848 /* Images.xcassets */; };
 		0065AB871A92606F000D9848 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0065AB851A92606F000D9848 /* LaunchScreen.xib */; };
 		0065AB931A92606F000D9848 /* musicApp7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AB921A92606F000D9848 /* musicApp7Tests.swift */; };
+		00716BCA1A9BB7D500338FC4 /* PreviewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00716BC91A9BB7D500338FC4 /* PreviewPlayerViewController.swift */; };
+		00716BCC1A9CCBBB00338FC4 /* FindPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00716BCB1A9CCBBB00338FC4 /* FindPartyViewController.swift */; };
 		00A9DA8B1A926259003A41B9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A9DA8A1A926259003A41B9 /* FacebookSDK.framework */; };
 		00A9DABF1A9268D7003A41B9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DABE1A9268D7003A41B9 /* Config.swift */; };
 		00A9DB091A928689003A41B9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DB081A928689003A41B9 /* SwiftyJSON.swift */; };
@@ -67,6 +69,8 @@
 		0065AB8C1A92606F000D9848 /* musicApp7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicApp7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0065AB911A92606F000D9848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0065AB921A92606F000D9848 /* musicApp7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicApp7Tests.swift; sourceTree = "<group>"; };
+		00716BC91A9BB7D500338FC4 /* PreviewPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPlayerViewController.swift; sourceTree = "<group>"; };
+		00716BCB1A9CCBBB00338FC4 /* FindPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartyViewController.swift; sourceTree = "<group>"; };
 		00A9DA8A1A926259003A41B9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		00A9DA8C1A926277003A41B9 /* musicApp7-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musicApp7-Bridging-Header.h"; sourceTree = "<group>"; };
 		00A9DABE1A9268D7003A41B9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				00DBDD701A94C2A9009F88DD /* PartyViewController.swift */,
 				00B526D01A96690E00F28EC8 /* SearchTableViewController.swift */,
 				00FBCBD21A97DFD80057DFF7 /* RequestTableViewController.swift */,
+				00716BC91A9BB7D500338FC4 /* PreviewPlayerViewController.swift */,
+				00716BCB1A9CCBBB00338FC4 /* FindPartyViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -377,11 +383,13 @@
 			files = (
 				00DBDD711A94C2A9009F88DD /* PartyViewController.swift in Sources */,
 				001D0BE71A944A65004514C5 /* PartyTableViewController.swift in Sources */,
+				00716BCA1A9BB7D500338FC4 /* PreviewPlayerViewController.swift in Sources */,
 				0065AB7F1A92606F000D9848 /* LoginViewController.swift in Sources */,
 				00B5215E1A94D3DA00F28EC8 /* PlayerView.swift in Sources */,
 				001D0BE31A930325004514C5 /* Request.swift in Sources */,
 				0065AB7D1A92606F000D9848 /* AppDelegate.swift in Sources */,
 				00FBCBD31A97DFD80057DFF7 /* RequestTableViewController.swift in Sources */,
+				00716BCC1A9CCBBB00338FC4 /* FindPartyViewController.swift in Sources */,
 				00A9DB0F1A928B25003A41B9 /* User.swift in Sources */,
 				001D0BE11A930225004514C5 /* Party.swift in Sources */,
 				00B526D11A96690E00F28EC8 /* SearchTableViewController.swift in Sources */,
