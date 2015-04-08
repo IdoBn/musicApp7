@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class User {
     // properties
@@ -53,13 +54,27 @@ class User {
             let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
             self.thumbnail = UIImage(data: data!)!
             
-            let largeUrl = NSURL(string: thumbnail + "?type=large")
-            let largeData = NSData(contentsOfURL: largeUrl!)
-            self.largeThumbnail = UIImage(data: largeData!)!
+            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
+                let largeUrl = NSURL(string: thumbnail + "?type=large")
+                println("waiting for image")
+                let largeData = NSData(contentsOfURL: largeUrl!)
+                self.largeThumbnail = UIImage(data: largeData!)!
+            }
         }
         
         if let accessToken = json["access_token"].string {
             self.accessToken = accessToken
         }
     }
+    
+    func likes(request: Request) -> Bool {
+        for like in request.likes {
+            if like.user.id == self.id {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }
+

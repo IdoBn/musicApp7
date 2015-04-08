@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 
 class FindPartyViewController: UIViewController {
 
@@ -55,9 +55,11 @@ class FindPartyViewController: UIViewController {
             switch identifier {
             case "showParty":
                 if let party = sender as? Party {
-                    let partyTVC = segue.destinationViewController as PartyTableViewController
+                    let partyTVC = segue.destinationViewController as! PartyTableViewController
                     partyTVC.party = party
-                    //partyTVC.user = user
+                    
+                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    partyTVC.user = appDelegate.user
                     
                 }
             default:

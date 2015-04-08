@@ -10,5 +10,5 @@ import Foundation
 
 enum URLS: String {
     case music = "http://music-hasalon-api.herokuapp.com"
-    case download = "http://ec2-54-85-146-44.compute-1.amazonaws.com:8989/api/info?url="
+    case download = "http://ec2-52-1-103-114.compute-1.amazonaws.com:8989/api/info?url="
 }

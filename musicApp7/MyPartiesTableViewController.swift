@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 
 class MyPartiesTableViewController: UITableViewController {
     
@@ -66,7 +66,7 @@ class MyPartiesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myPartyCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("myPartyCell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel!.text = self.parties[indexPath.row].name as String
         
@@ -90,7 +90,7 @@ class MyPartiesTableViewController: UITableViewController {
         })
         
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            let textField = alert.textFields![0] as UITextField
+            let textField = alert.textFields![0] as! UITextField
             
             if textField.text != "" {
                 Alamofire.request(Alamofire.Method.POST, "\(URLS.music.rawValue)/parties", parameters: [
@@ -135,9 +135,9 @@ class MyPartiesTableViewController: UITableViewController {
         if let identifier = segue.identifier {
             switch identifier {
             case "showParty":
-                let selectedIndex = self.tableView.indexPathForCell(sender as UITableViewCell)
+                let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)
                 if let indexPath = selectedIndex {
-                    let partyTVC = segue.destinationViewController as PartyViewController
+                    let partyTVC = segue.destinationViewController as! PartyViewController
                     partyTVC.party = self.parties[indexPath.row]
                     partyTVC.user = self.user
                 }

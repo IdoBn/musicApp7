@@ -21,7 +21,6 @@
 		00716BCC1A9CCBBB00338FC4 /* FindPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00716BCB1A9CCBBB00338FC4 /* FindPartyViewController.swift */; };
 		00A9DA8B1A926259003A41B9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A9DA8A1A926259003A41B9 /* FacebookSDK.framework */; };
 		00A9DABF1A9268D7003A41B9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DABE1A9268D7003A41B9 /* Config.swift */; };
-		00A9DB091A928689003A41B9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DB081A928689003A41B9 /* SwiftyJSON.swift */; };
 		00A9DB0B1A928AB1003A41B9 /* MyPartiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DB0A1A928AB1003A41B9 /* MyPartiesTableViewController.swift */; };
 		00A9DB0F1A928B25003A41B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9DB0E1A928B25003A41B9 /* User.swift */; };
 		00B5215E1A94D3DA00F28EC8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5215D1A94D3DA00F28EC8 /* PlayerView.swift */; };
@@ -74,7 +73,6 @@
 		00A9DA8A1A926259003A41B9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		00A9DA8C1A926277003A41B9 /* musicApp7-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musicApp7-Bridging-Header.h"; sourceTree = "<group>"; };
 		00A9DABE1A9268D7003A41B9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		00A9DB081A928689003A41B9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../Pods/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		00A9DB0A1A928AB1003A41B9 /* MyPartiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPartiesTableViewController.swift; sourceTree = "<group>"; };
 		00A9DB0E1A928B25003A41B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00B5215D1A94D3DA00F28EC8 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				0065AB831A92606F000D9848 /* Images.xcassets */,
 				00A9DA8C1A926277003A41B9 /* musicApp7-Bridging-Header.h */,
 				0065AB7C1A92606F000D9848 /* AppDelegate.swift */,
-				00A9DB081A928689003A41B9 /* SwiftyJSON.swift */,
 				0065AB7B1A92606F000D9848 /* Info.plist */,
 				00A9DABE1A9268D7003A41B9 /* Config.swift */,
 			);
@@ -282,6 +279,11 @@
 				TargetAttributes = {
 					0065AB761A92606F000D9848 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0065AB8B1A92606F000D9848 = {
 						CreatedOnToolsVersion = 6.1;
@@ -396,7 +398,6 @@
 				00A9DB0B1A928AB1003A41B9 /* MyPartiesTableViewController.swift in Sources */,
 				001D0BE51A938EC3004514C5 /* Like.swift in Sources */,
 				00A9DABF1A9268D7003A41B9 /* Config.swift in Sources */,
-				00A9DB091A928689003A41B9 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +528,7 @@
 					"/Users/IdoBN/Downloads/libPusher-master/Frameworks",
 				);
 				INFOPLIST_FILE = musicApp7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "musicApp7/musicApp7-Bridging-Header.h";
@@ -546,6 +548,7 @@
 					"/Users/IdoBN/Downloads/libPusher-master/Frameworks",
 				);
 				INFOPLIST_FILE = musicApp7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "musicApp7/musicApp7-Bridging-Header.h";

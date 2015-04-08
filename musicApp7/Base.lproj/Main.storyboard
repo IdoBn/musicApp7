@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -200,10 +200,10 @@
         <scene sceneID="Vjh-du-beK">
             <objects>
                 <tableViewController id="C6q-we-sJx" customClass="RequestTableViewController" customModule="musicApp7" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="tHd-Ym-u9y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tHd-Ym-u9y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="88" id="29A-Dl-uFg">
@@ -233,13 +233,15 @@
                             <outlet property="delegate" destination="C6q-we-sJx" id="oKD-qv-qj3"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="ryd-r3-wJG" kind="show" identifier="showPlayer" id="9Gn-Rp-G1s"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKU-Wg-xXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3415" y="364"/>
+            <point key="canvasLocation" x="4119" y="340"/>
         </scene>
         <!--Preview Player View Controller-->
         <scene sceneID="lWe-kX-FzK">
@@ -253,11 +255,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOj-Ug-8X8" customClass="PlayerView" customModule="musicApp7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOj-Ug-8X8" customClass="PlayerView" customModule="musicApp7" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-HT-Icz">
-                                        <rect key="frame" x="282" y="227" width="37" height="37"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-HT-Icz">
+                                        <rect key="frame" x="282" y="225" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -282,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Eo-40-65I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4181" y="364"/>
+            <point key="canvasLocation" x="4933" y="340"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="hHs-hD-0xf">
@@ -342,7 +344,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2515" y="-1096"/>
+            <point key="canvasLocation" x="3354" y="340"/>
         </scene>
         <!--Item-->
         <scene sceneID="2NP-2S-IID">
@@ -438,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIP-uX-Qqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="1072"/>
+            <point key="canvasLocation" x="1836" y="1072"/>
         </scene>
         <!--Party Table View Controller-->
         <scene sceneID="NZY-n4-f5n">
@@ -478,10 +480,13 @@
                             <outlet property="delegate" destination="uKW-mk-n73" id="PiF-Go-od2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="RVA-W4-GYa" kind="show" identifier="showSearch" id="Rzm-M0-Wus"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fs7-EA-7yH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="1072"/>
+            <point key="canvasLocation" x="2510" y="1072"/>
         </scene>
         <!--Item-->
         <scene sceneID="f6f-Ym-Yvg">
@@ -505,5 +510,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E4q-Ej-1FD"/>
+        <segue reference="Rzm-M0-Wus"/>
     </inferredMetricsTieBreakers>
 </document>

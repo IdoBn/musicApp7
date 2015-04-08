@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 
 class PartyTableViewController: UITableViewController {
 
@@ -26,6 +26,9 @@ class PartyTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         //setUp()
+        
+        // search
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchItem:")
         
         // refresh
         var refreshControl = UIRefreshControl()
@@ -46,7 +49,10 @@ class PartyTableViewController: UITableViewController {
         
         }
     }
-
+    
+    func searchItem(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("showSearch", sender: self)
+    }
 
     // MARK: - Table view data source
 
@@ -66,7 +72,7 @@ class PartyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as! UITableViewCell
         
         if let request = self.party?.requests[indexPath.row] {
             // Configure the cell...
@@ -124,13 +130,17 @@ class PartyTableViewController: UITableViewController {
     // Pass the selected object to the new view controller.
         if let identifier = segue.identifier {
             switch identifier {
-                case "showRequest":
-                let selectedIndex = self.tableView.indexPathForCell(sender as UITableViewCell)
+            case "showRequest":
+                let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)
                 if let index = selectedIndex?.row {
-                    let requestVC = segue.destinationViewController as RequestTableViewController
+                    let requestVC = segue.destinationViewController as! RequestTableViewController
                     requestVC.user = self.user
                     requestVC.request = self.party!.requests[index]
                 }
+            case "showSearch":
+                let searchVC = segue.destinationViewController as! SearchTableViewController
+                searchVC.user = self.user
+                searchVC.party = self.party
             default:
                 break
             }

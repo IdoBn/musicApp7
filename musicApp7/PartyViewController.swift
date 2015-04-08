@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 import AVFoundation
 import AVKit
 
@@ -44,6 +44,8 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
         // activity monitor
         activityMonitor.color = UIColor.blackColor()
         activityMonitor.startAnimating()
+        
+        // av audio player
         
         setUp()
     }
@@ -118,9 +120,12 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             Alamofire.request(.GET, "\(URLS.download.rawValue)\(requestUrl)").responseJSON {
                 (request, response, json, error) in
-                let jsonValue = JSON(json!)
-                let str = jsonValue["direct_url"].stringValue
-                completionHandler(str)
+                if let jsonUn: AnyObject = json {
+                    let jsonValue = JSON(jsonUn)
+                    let str = jsonValue["direct_url"].stringValue
+                    println(str)
+                    completionHandler(str)
+                }
             }
         }
     }
@@ -139,7 +144,7 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as! UITableViewCell
         
         if let request = self.party?.requests[indexPath.row] {
             // Configure the cell...
@@ -184,12 +189,12 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
         if let identifier = segue.identifier {
             switch identifier {
             case "showSearch":
-                let searchVC = segue.destinationViewController as SearchTableViewController
+                let searchVC = segue.destinationViewController as!SearchTableViewController
                 searchVC.user = self.user
                 searchVC.party = self.party
             case "showRequest":
-                let requestVC = segue.destinationViewController  as RequestTableViewController
-                let selectedIndex = self.tableView.indexPathForCell(sender as UITableViewCell)
+                let requestVC = segue.destinationViewController  as! RequestTableViewController
+                let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)
                 if let index = selectedIndex?.row {
                     requestVC.user = self.user
                     requestVC.request = self.party!.requests[index]

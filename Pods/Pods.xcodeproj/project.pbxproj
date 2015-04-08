@@ -1,1541 +1,663 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0264AEC4EE12D853B47A9E07</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>042FB083471D65EF9471B098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C509BF8B9E71C543A868874</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>0561F9B492A0594768B23334</key>
-		<dict>
-			<key>fileRef</key>
-			<string>182808920B0C3543DD639E52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>07D9EC3B60441DCD25A8F97E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E2E1256C696391BD76DE5596</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>07E0E2F8FF24DB9F72389E9C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_musicApp7.framework</string>
-			<key>path</key>
-			<string>Pods_musicApp7.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>0E404663CCF3ED3E33B2B3A7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>698F2DD9FCCA7BDB9CC60D87</string>
-				<string>1004EDE2EBC4D7C6F29A5D50</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Alamofire</string>
-			<key>path</key>
-			<string>Alamofire</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1004EDE2EBC4D7C6F29A5D50</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5BFE6672179CF6ED7741301</string>
-				<string>A71A6459F9F2B5C565704AC9</string>
-				<string>405BB014F4EDE42167E74EE3</string>
-				<string>535F9F96E0D3570851A75012</string>
-				<string>48B8D9FDF94281C1F81CB805</string>
-				<string>C0D8B0DB694F6E8D3CC0A44C</string>
-				<string>DD19B84944CCDAF436098CBB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-musicApp7-Alamofire</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10315FAB77F6C44B0AB86B95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-musicApp7-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1499939A4B4A0175FB74981C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>SwiftyJSON.swift</string>
-			<key>path</key>
-			<string>Source/SwiftyJSON.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15CE50853ADA6F8EB0143A4A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16E78409157A5395EF55CF8B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Alamofire.framework</string>
-			<key>path</key>
-			<string>Alamofire.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>182808920B0C3543DD639E52</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>1BCDA4C25A7D8454FFDF68BD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>182808920B0C3543DD639E52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1CF429A4E8962344F05E8407</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F4498BA611CA0BEAD13434F2</string>
-				<string>85B74CD1074B7D9EC7671BF6</string>
-				<string>6419E0CE9B2AEE45822A43E5</string>
-				<string>10315FAB77F6C44B0AB86B95</string>
-				<string>49B6C28DCA289B125A6C0730</string>
-				<string>F422AF35EB39795675CCC6AA</string>
-				<string>89F64F2E1637B3764B129E39</string>
-				<string>43815BD83A88CAC8840BDFC1</string>
-				<string>2BC3529684C37736898B0129</string>
-				<string>C50E80DF5E3D68EC0303D79F</string>
-				<string>A7BA2A62B57D39A3E4E7EFA3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-musicApp7</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-musicApp7</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1F6C6417256E5B125EAEE3A3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>182808920B0C3543DD639E52</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20AA9EA39AD3DD624A78B293</key>
-		<dict>
-			<key>fileRef</key>
-			<string>49B6C28DCA289B125A6C0730</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>24471040158C3D8F57E4EB14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>28573DACA8AF620B1CB00F38</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1F6C6417256E5B125EAEE3A3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2A8878FDF34C844674925FB9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>0264AEC4EE12D853B47A9E07</string>
-				<string>67CCF833E770DC5CC805E421</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2BC3529684C37736898B0129</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F4D113A1AF2338D1E7E5F35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>48B8D9FDF94281C1F81CB805</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3086DE44402F08837CEFF7F0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D633B183D697B75D1985A5C2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>35F60E83160F629D83A6F83C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8CFFE19A6717F4426987A723</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3861D5CAAF00E45BF7FD660C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3AAD89BAF1CD991B44EEB887</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0561F9B492A0594768B23334</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3B4A2C62204BAEC294C90353</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C4491DEB6C999012A781566</key>
-		<dict>
-			<key>fileRef</key>
-			<string>698F2DD9FCCA7BDB9CC60D87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C509BF8B9E71C543A868874</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CFD2240C7ABB63CF006A57C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>AFBF890B763A268B471E3E3B</string>
-				<string>66B7D5441B624CBFAB94F5AC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3F30E6D655DEBF9F5E170305</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>16E78409157A5395EF55CF8B</string>
-				<string>07E0E2F8FF24DB9F72389E9C</string>
-				<string>5CE4552DB56E91AC8FB2E0E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>405BB014F4EDE42167E74EE3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43815BD83A88CAC8840BDFC1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-musicApp7-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45C75965B3EA291CF1EE3118</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C9453B40FFBFF3451AB537EE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>SwiftyJSON</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>48B8D9FDF94281C1F81CB805</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49B6C28DCA289B125A6C0730</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-musicApp7-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BB8F0B77F60F90ABD8A1457</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D9531BDDF90C2E49D96224D6</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F8EEF4AB09E64A7C6DBC78E7</string>
-				<string>89773192FB5D6E44D75721D8</string>
-				<string>954E597F5E86621F26C70E15</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-musicApp7-SwiftyJSON</string>
-			<key>productName</key>
-			<string>Pods-musicApp7-SwiftyJSON</string>
-			<key>productReference</key>
-			<string>5CE4552DB56E91AC8FB2E0E9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>4F004DADA609770470FD65BB</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3CFD2240C7ABB63CF006A57C</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F08207B5ABBC81E71AAB2E50</string>
-				<string>3086DE44402F08837CEFF7F0</string>
-				<string>35F60E83160F629D83A6F83C</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-musicApp7-Alamofire</string>
-			<key>productName</key>
-			<string>Pods-musicApp7-Alamofire</string>
-			<key>productReference</key>
-			<string>16E78409157A5395EF55CF8B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>535F9F96E0D3570851A75012</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A5FA8F20A23C91CE70D1A69</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>20AA9EA39AD3DD624A78B293</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5CE4552DB56E91AC8FB2E0E9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SwiftyJSON.framework</string>
-			<key>path</key>
-			<string>SwiftyJSON.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>6402983F251FD28A08A16F78</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1CF429A4E8962344F05E8407</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6419E0CE9B2AEE45822A43E5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-musicApp7-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>66B7D5441B624CBFAB94F5AC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>535F9F96E0D3570851A75012</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>Alamofire</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>67CCF833E770DC5CC805E421</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>698F2DD9FCCA7BDB9CC60D87</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Alamofire.swift</string>
-			<key>path</key>
-			<string>Source/Alamofire.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>85B74CD1074B7D9EC7671BF6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-musicApp7.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>89773192FB5D6E44D75721D8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1BCDA4C25A7D8454FFDF68BD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>89F64F2E1637B3764B129E39</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-musicApp7-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C96618B43217917AAF27F5E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>EF3100A888D57A1D2CE6908B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>4BB8F0B77F60F90ABD8A1457</string>
-			<key>remoteInfo</key>
-			<string>Pods-musicApp7-SwiftyJSON</string>
-		</dict>
-		<key>8CFFE19A6717F4426987A723</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DD19B84944CCDAF436098CBB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9455A7B3E53F2519A3F92858</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C6308EC0F2431E1766A3C43E</string>
-				<string>15CE50853ADA6F8EB0143A4A</string>
-				<string>24471040158C3D8F57E4EB14</string>
-				<string>C9453B40FFBFF3451AB537EE</string>
-				<string>3861D5CAAF00E45BF7FD660C</string>
-				<string>3B4A2C62204BAEC294C90353</string>
-				<string>3C509BF8B9E71C543A868874</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-musicApp7-SwiftyJSON</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>954E597F5E86621F26C70E15</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>042FB083471D65EF9471B098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>968AFE34A0359940AE34F32B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-musicApp7-SwiftyJSON</string>
-			<key>target</key>
-			<string>4BB8F0B77F60F90ABD8A1457</string>
-			<key>targetProxy</key>
-			<string>8C96618B43217917AAF27F5E</string>
-		</dict>
-		<key>A054BD8568421ECC7FF24CEB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1499939A4B4A0175FB74981C</string>
-				<string>9455A7B3E53F2519A3F92858</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SwiftyJSON</string>
-			<key>path</key>
-			<string>SwiftyJSON</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A08667437C66ED05EE510969</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C50E80DF5E3D68EC0303D79F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7/Pods-musicApp7.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_musicApp7</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A3D98A3A972C69FE1F4611BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3861D5CAAF00E45BF7FD660C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A615F9986F3DD05083478946</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>AC7CD230F956144C800AADAB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5A5FA8F20A23C91CE70D1A69</string>
-				<string>3AAD89BAF1CD991B44EEB887</string>
-				<string>07D9EC3B60441DCD25A8F97E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>DEF93C3EB7D8E49F6D1C2B9B</string>
-				<string>968AFE34A0359940AE34F32B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-musicApp7</string>
-			<key>productName</key>
-			<string>Pods-musicApp7</string>
-			<key>productReference</key>
-			<string>07E0E2F8FF24DB9F72389E9C</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>A71A6459F9F2B5C565704AC9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A7BA2A62B57D39A3E4E7EFA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AC7CD230F956144C800AADAB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A08667437C66ED05EE510969</string>
-				<string>D5912D4180E65A866EB7B842</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>ADC328C8E27B66FCB4EE0D74</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>AFBF890B763A268B471E3E3B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>535F9F96E0D3570851A75012</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Alamofire</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B59C0BEA5D02DC41520CFB64</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C9453B40FFBFF3451AB537EE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SwiftyJSON</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C0D8B0DB694F6E8D3CC0A44C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C50E80DF5E3D68EC0303D79F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5BFE6672179CF6ED7741301</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C6308EC0F2431E1766A3C43E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C9453B40FFBFF3451AB537EE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-musicApp7-SwiftyJSON-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5912D4180E65A866EB7B842</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A7BA2A62B57D39A3E4E7EFA3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-musicApp7/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-musicApp7/Pods-musicApp7.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_musicApp7</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D633B183D697B75D1985A5C2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>182808920B0C3543DD639E52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D9531BDDF90C2E49D96224D6</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B59C0BEA5D02DC41520CFB64</string>
-				<string>45C75965B3EA291CF1EE3118</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DD19B84944CCDAF436098CBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-Alamofire-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEF93C3EB7D8E49F6D1C2B9B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-musicApp7-Alamofire</string>
-			<key>target</key>
-			<string>4F004DADA609770470FD65BB</string>
-			<key>targetProxy</key>
-			<string>FE8E16B1E367A650CE08E123</string>
-		</dict>
-		<key>E2E1256C696391BD76DE5596</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2BC3529684C37736898B0129</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E3F7AEA72556B3D247F5CE01</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1499939A4B4A0175FB74981C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>ED11620EDD5BFC9504F9BE1A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>ADC328C8E27B66FCB4EE0D74</string>
-				<string>28573DACA8AF620B1CB00F38</string>
-				<string>F3579FF679CC6D4A4D0BCB3D</string>
-				<string>3F30E6D655DEBF9F5E170305</string>
-				<string>6402983F251FD28A08A16F78</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF3100A888D57A1D2CE6908B</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2A8878FDF34C844674925FB9</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>ED11620EDD5BFC9504F9BE1A</string>
-			<key>productRefGroup</key>
-			<string>3F30E6D655DEBF9F5E170305</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>A615F9986F3DD05083478946</string>
-				<string>4F004DADA609770470FD65BB</string>
-				<string>4BB8F0B77F60F90ABD8A1457</string>
-			</array>
-		</dict>
-		<key>F08207B5ABBC81E71AAB2E50</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3C4491DEB6C999012A781566</string>
-				<string>2F4D113A1AF2338D1E7E5F35</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F3579FF679CC6D4A4D0BCB3D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0E404663CCF3ED3E33B2B3A7</string>
-				<string>A054BD8568421ECC7FF24CEB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F422AF35EB39795675CCC6AA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-musicApp7-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F4498BA611CA0BEAD13434F2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8EEF4AB09E64A7C6DBC78E7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3D98A3A972C69FE1F4611BC</string>
-				<string>E3F7AEA72556B3D247F5CE01</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FE8E16B1E367A650CE08E123</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>EF3100A888D57A1D2CE6908B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>4F004DADA609770470FD65BB</string>
-			<key>remoteInfo</key>
-			<string>Pods-musicApp7-Alamofire</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>EF3100A888D57A1D2CE6908B</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041A59ECF48392D853A48A89 /* Pods-musicApp7-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DA4D6E578456C28EA51DA6 /* Pods-musicApp7-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		260BB1D8928E886434FBBCF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAED6E24BD8A5BB114891242 /* Foundation.framework */; };
+		31E00FD65B32574B29203D49 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF73A1C3D647D47D78EAC25 /* SwiftyJSON.swift */; };
+		35FA8CB8C86E523021247047 /* Pods-musicApp7-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B325EB717DA681ABF7AA5013 /* Pods-musicApp7-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AF732914ACAA400C7F5ABFD /* Pods-musicApp7-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB57E24A8613FFA15C63223 /* Pods-musicApp7-dummy.m */; };
+		7C0E799C55688A80A9D3E0D4 /* Pods-musicApp7-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8797A5FC284AD556384E74E8 /* Pods-musicApp7-SwiftyJSON-dummy.m */; };
+		882B660B7C66D4AD5423850B /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48195CCC1F66986AC04D64A /* Alamofire.swift */; };
+		A117D36A8EE97477A91F7FA1 /* Pods-musicApp7-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A21C37FCE35D6F7B74F412BE /* Pods-musicApp7-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A78F755B92E7A0BD386B0217 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAED6E24BD8A5BB114891242 /* Foundation.framework */; };
+		F565A98FA1B5FF7EE482C131 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAED6E24BD8A5BB114891242 /* Foundation.framework */; };
+		F5DD013B300A2F83C96D1188 /* Pods-musicApp7-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB009EB7DB97F4B652B2F1 /* Pods-musicApp7-Alamofire-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27CFD1326271AA33D9E3BD39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8E9A645AAB14E7437A676C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBC4D0AA73C293E63347C9E3;
+			remoteInfo = "Pods-musicApp7-Alamofire";
+		};
+		7EE621611CDC8ACF74D3710E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8E9A645AAB14E7437A676C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48B22D341C8AF52BD349760B;
+			remoteInfo = "Pods-musicApp7-SwiftyJSON";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10914120A1177AEC607E47B6 /* Pods-musicApp7-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		23465BE3E5543B7EDF38D417 /* Pods-musicApp7-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-musicApp7-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		2BB57E24A8613FFA15C63223 /* Pods-musicApp7-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-musicApp7-dummy.m"; sourceTree = "<group>"; };
+		40F05578B4EA79B956D929A1 /* Pods-musicApp7.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-musicApp7.modulemap"; sourceTree = "<group>"; };
+		509424DB917272CF327B30FF /* Pods-musicApp7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7.release.xcconfig"; sourceTree = "<group>"; };
+		526810BDB4031F3E03360AF7 /* Pods-musicApp7-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		613C430A7FBE6634029AB0C2 /* Pods-musicApp7-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-environment.h"; sourceTree = "<group>"; };
+		64FA0714B9F7FA719C4AD245 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDB009EB7DB97F4B652B2F1 /* Pods-musicApp7-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-musicApp7-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		7816864E4F777242F8F12CA6 /* Pods-musicApp7-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		7A82F8ECBC333A7C22B08623 /* Pods-musicApp7-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-musicApp7-acknowledgements.plist"; sourceTree = "<group>"; };
+		7B2674BC724C0D68E77F2490 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7BECDCA40827820ABD6AD448 /* Pods-musicApp7-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-musicApp7-Alamofire.modulemap"; sourceTree = "<group>"; };
+		7D26ACCCEA638ED7C7DD11F7 /* Pods-musicApp7-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-musicApp7-resources.sh"; sourceTree = "<group>"; };
+		7E52D3771154ED6E5724AEB0 /* Pods_musicApp7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicApp7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		834615A6A962A8083C1DBB29 /* Pods-musicApp7-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		8797A5FC284AD556384E74E8 /* Pods-musicApp7-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-musicApp7-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		98C8D1717DB4D255D70CB8F8 /* Pods-musicApp7-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-musicApp7-frameworks.sh"; sourceTree = "<group>"; };
+		9C2243CC01BFF3527C320587 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EF73A1C3D647D47D78EAC25 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		A21C37FCE35D6F7B74F412BE /* Pods-musicApp7-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		A296155326D958E04FEA0D07 /* Pods-musicApp7-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		A6586696C70470E106E2E2B3 /* Pods-musicApp7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7.debug.xcconfig"; sourceTree = "<group>"; };
+		ACDC6CCE6484291248E22854 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B325EB717DA681ABF7AA5013 /* Pods-musicApp7-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-umbrella.h"; sourceTree = "<group>"; };
+		B6C2EE85F20108D63370CE3E /* Pods-musicApp7-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicApp7-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		C7DA4D6E578456C28EA51DA6 /* Pods-musicApp7-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicApp7-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		CAED6E24BD8A5BB114891242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D48195CCC1F66986AC04D64A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		D9918C074E8866220D9371FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA412C6744767A7A934E83B4 /* Pods-musicApp7-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-musicApp7-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E101618F6CB0BAA929B74805 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D479020E00BA4512A5AE951 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78F755B92E7A0BD386B0217 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D95A4FB30403EC345C24BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F565A98FA1B5FF7EE482C131 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5AA84272DE8BAAEF9C7154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260BB1D8928E886434FBBCF2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		021AFAF640F1A6EBA7AFDF0F = {
+			isa = PBXGroup;
+			children = (
+				7B2674BC724C0D68E77F2490 /* Podfile */,
+				BF1B304E36830CF71A200B2C /* Frameworks */,
+				802C96FDC90D3DA690F5C8AD /* Pods */,
+				BD71558C9AD6DE7E6BCCFC02 /* Products */,
+				1FE403654C1721013AF2A88B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		1FE403654C1721013AF2A88B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6766892995F026AFB751C06E /* Pods-musicApp7 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		537A0928EC6D6B13E3CC1A98 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9918C074E8866220D9371FF /* Info.plist */,
+				23465BE3E5543B7EDF38D417 /* Pods-musicApp7-SwiftyJSON.modulemap */,
+				B6C2EE85F20108D63370CE3E /* Pods-musicApp7-SwiftyJSON.xcconfig */,
+				10914120A1177AEC607E47B6 /* Pods-musicApp7-SwiftyJSON-Private.xcconfig */,
+				8797A5FC284AD556384E74E8 /* Pods-musicApp7-SwiftyJSON-dummy.m */,
+				526810BDB4031F3E03360AF7 /* Pods-musicApp7-SwiftyJSON-prefix.pch */,
+				C7DA4D6E578456C28EA51DA6 /* Pods-musicApp7-SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-musicApp7-SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		6766892995F026AFB751C06E /* Pods-musicApp7 */ = {
+			isa = PBXGroup;
+			children = (
+				9C2243CC01BFF3527C320587 /* Info.plist */,
+				40F05578B4EA79B956D929A1 /* Pods-musicApp7.modulemap */,
+				DA412C6744767A7A934E83B4 /* Pods-musicApp7-acknowledgements.markdown */,
+				7A82F8ECBC333A7C22B08623 /* Pods-musicApp7-acknowledgements.plist */,
+				2BB57E24A8613FFA15C63223 /* Pods-musicApp7-dummy.m */,
+				613C430A7FBE6634029AB0C2 /* Pods-musicApp7-environment.h */,
+				98C8D1717DB4D255D70CB8F8 /* Pods-musicApp7-frameworks.sh */,
+				7D26ACCCEA638ED7C7DD11F7 /* Pods-musicApp7-resources.sh */,
+				B325EB717DA681ABF7AA5013 /* Pods-musicApp7-umbrella.h */,
+				A6586696C70470E106E2E2B3 /* Pods-musicApp7.debug.xcconfig */,
+				509424DB917272CF327B30FF /* Pods-musicApp7.release.xcconfig */,
+			);
+			name = "Pods-musicApp7";
+			path = "Target Support Files/Pods-musicApp7";
+			sourceTree = "<group>";
+		};
+		727A794765B971DBAF11C89F /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				9EF73A1C3D647D47D78EAC25 /* SwiftyJSON.swift */,
+				537A0928EC6D6B13E3CC1A98 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		802C96FDC90D3DA690F5C8AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				964D3F2F94E41DF039701F1B /* Alamofire */,
+				727A794765B971DBAF11C89F /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		964D3F2F94E41DF039701F1B /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				D48195CCC1F66986AC04D64A /* Alamofire.swift */,
+				EF670CB45A7C3B0A94049C85 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		BD71558C9AD6DE7E6BCCFC02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64FA0714B9F7FA719C4AD245 /* Alamofire.framework */,
+				7E52D3771154ED6E5724AEB0 /* Pods_musicApp7.framework */,
+				ACDC6CCE6484291248E22854 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF1B304E36830CF71A200B2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB6E4B3505C6A8EA6B0F8FFA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB6E4B3505C6A8EA6B0F8FFA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CAED6E24BD8A5BB114891242 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EF670CB45A7C3B0A94049C85 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E101618F6CB0BAA929B74805 /* Info.plist */,
+				7BECDCA40827820ABD6AD448 /* Pods-musicApp7-Alamofire.modulemap */,
+				A296155326D958E04FEA0D07 /* Pods-musicApp7-Alamofire.xcconfig */,
+				834615A6A962A8083C1DBB29 /* Pods-musicApp7-Alamofire-Private.xcconfig */,
+				6EDB009EB7DB97F4B652B2F1 /* Pods-musicApp7-Alamofire-dummy.m */,
+				7816864E4F777242F8F12CA6 /* Pods-musicApp7-Alamofire-prefix.pch */,
+				A21C37FCE35D6F7B74F412BE /* Pods-musicApp7-Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-musicApp7-Alamofire";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6FE2D249F700499C6FF50226 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A117D36A8EE97477A91F7FA1 /* Pods-musicApp7-Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCA1B33B3E5F677C6987407 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041A59ECF48392D853A48A89 /* Pods-musicApp7-SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE889F6F4D4AB5B2FB6C9209 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35FA8CB8C86E523021247047 /* Pods-musicApp7-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		48B22D341C8AF52BD349760B /* Pods-musicApp7-SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AB675A7AD46E83CEFB0730 /* Build configuration list for PBXNativeTarget "Pods-musicApp7-SwiftyJSON" */;
+			buildPhases = (
+				B11718F3BA380D505A8BD9CA /* Sources */,
+				4D479020E00BA4512A5AE951 /* Frameworks */,
+				BCCA1B33B3E5F677C6987407 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-musicApp7-SwiftyJSON";
+			productName = "Pods-musicApp7-SwiftyJSON";
+			productReference = ACDC6CCE6484291248E22854 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93627FDB5C130ED238B0E359 /* Pods-musicApp7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7200E8ADED697E1AF8E97FF0 /* Build configuration list for PBXNativeTarget "Pods-musicApp7" */;
+			buildPhases = (
+				5A5591379EF292162B6D5171 /* Sources */,
+				FA5AA84272DE8BAAEF9C7154 /* Frameworks */,
+				FE889F6F4D4AB5B2FB6C9209 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72B556D01A522E873520B3A1 /* PBXTargetDependency */,
+				66CD131902B42266A06ED613 /* PBXTargetDependency */,
+			);
+			name = "Pods-musicApp7";
+			productName = "Pods-musicApp7";
+			productReference = 7E52D3771154ED6E5724AEB0 /* Pods_musicApp7.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FBC4D0AA73C293E63347C9E3 /* Pods-musicApp7-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31D4ABFD0C502961E9B74131 /* Build configuration list for PBXNativeTarget "Pods-musicApp7-Alamofire" */;
+			buildPhases = (
+				035D7901A9AA78C465516C10 /* Sources */,
+				A9D95A4FB30403EC345C24BB /* Frameworks */,
+				6FE2D249F700499C6FF50226 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-musicApp7-Alamofire";
+			productName = "Pods-musicApp7-Alamofire";
+			productReference = 64FA0714B9F7FA719C4AD245 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8E9A645AAB14E7437A676C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 799B045320374CBAA1232C76 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 021AFAF640F1A6EBA7AFDF0F;
+			productRefGroup = BD71558C9AD6DE7E6BCCFC02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93627FDB5C130ED238B0E359 /* Pods-musicApp7 */,
+				FBC4D0AA73C293E63347C9E3 /* Pods-musicApp7-Alamofire */,
+				48B22D341C8AF52BD349760B /* Pods-musicApp7-SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		035D7901A9AA78C465516C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882B660B7C66D4AD5423850B /* Alamofire.swift in Sources */,
+				F5DD013B300A2F83C96D1188 /* Pods-musicApp7-Alamofire-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5591379EF292162B6D5171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF732914ACAA400C7F5ABFD /* Pods-musicApp7-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B11718F3BA380D505A8BD9CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C0E799C55688A80A9D3E0D4 /* Pods-musicApp7-SwiftyJSON-dummy.m in Sources */,
+				31E00FD65B32574B29203D49 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66CD131902B42266A06ED613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-musicApp7-SwiftyJSON";
+			target = 48B22D341C8AF52BD349760B /* Pods-musicApp7-SwiftyJSON */;
+			targetProxy = 7EE621611CDC8ACF74D3710E /* PBXContainerItemProxy */;
+		};
+		72B556D01A522E873520B3A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-musicApp7-Alamofire";
+			target = FBC4D0AA73C293E63347C9E3 /* Pods-musicApp7-Alamofire */;
+			targetProxy = 27CFD1326271AA33D9E3BD39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00721F9616141CF9EB67FA8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834615A6A962A8083C1DBB29 /* Pods-musicApp7-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		084B039F4E9650AB732F3065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 509424DB917272CF327B30FF /* Pods-musicApp7.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7/Pods-musicApp7.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_musicApp7;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0F7A5CBB82CC9E064928693D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834615A6A962A8083C1DBB29 /* Pods-musicApp7-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7-Alamofire/Pods-musicApp7-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E8057C66417FAEA52858209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6586696C70470E106E2E2B3 /* Pods-musicApp7.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7/Pods-musicApp7.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_musicApp7;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79D05FEB48D0FAF18B2E273A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10914120A1177AEC607E47B6 /* Pods-musicApp7-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		84824F069C86F80A6CFC2792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E8B82D3BF0614234BFF3D69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10914120A1177AEC607E47B6 /* Pods-musicApp7-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-musicApp7-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-musicApp7-SwiftyJSON/Pods-musicApp7-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB043D0900583EF299E0FE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31D4ABFD0C502961E9B74131 /* Build configuration list for PBXNativeTarget "Pods-musicApp7-Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7A5CBB82CC9E064928693D /* Debug */,
+				00721F9616141CF9EB67FA8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7200E8ADED697E1AF8E97FF0 /* Build configuration list for PBXNativeTarget "Pods-musicApp7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E8057C66417FAEA52858209 /* Debug */,
+				084B039F4E9650AB732F3065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		799B045320374CBAA1232C76 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84824F069C86F80A6CFC2792 /* Debug */,
+				EB043D0900583EF299E0FE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AB675A7AD46E83CEFB0730 /* Build configuration list for PBXNativeTarget "Pods-musicApp7-SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8B82D3BF0614234BFF3D69D /* Debug */,
+				79D05FEB48D0FAF18B2E273A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8E9A645AAB14E7437A676C4 /* Project object */;
+}

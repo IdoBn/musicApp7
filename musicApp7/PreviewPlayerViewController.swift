@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 
 class PreviewPlayerViewController: UIViewController, PlayerViewDelegate {
 

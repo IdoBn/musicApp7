@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class RequestTableViewController: UITableViewController {
 
     var request: Request!
     var user: User?
+    
+    var likes: Bool {
+        get {
+            if self.user == nil {
+                return true
+            }
+            else {
+                return self.user!.likes(self.request)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +38,8 @@ class RequestTableViewController: UITableViewController {
         //let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
         //tableView.registerNib(nib!, forCellReuseIdentifier: "profileCell")
         
+        
+        
         self.title = request.title
     }
 
@@ -36,7 +51,7 @@ class RequestTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return 4
         } else {
             return self.request.likes.count
         }
@@ -45,29 +60,38 @@ class RequestTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Configure the cell...
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as! UITableViewCell
             
-            if indexPath.row == 1 {
-                cell.textLabel?.text = "votes: \(request.likes.count)"
-                return cell
-            }
-            
-            if indexPath.row == 0 {
+            switch indexPath.row {
+            case 0:
                 cell.imageView?.image = request.user!.thumbnail
                 cell.imageView?.layer.cornerRadius = 25
                 cell.imageView?.layer.masksToBounds = true
-                //cell.imageView?.frame = CGRectMake(cell.imageView?.frame.origin.x, cell.imageView?.frame.origin.y, 100, 100)
                 
                 cell.textLabel?.text = request.user!.name
                 cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
                 
                 return cell
+            case 1:
+                cell.textLabel?.text = "votes: \(request.likes.count)"
+                return cell
+            case 2:
+//                cell.textLabel?.text = "up vote!"
+                if self.likes == true {
+                    cell.textLabel?.text = "down vote!"
+                } else {
+                    cell.textLabel?.text = "up vote!"
+                }
+                return cell
+            case 3:
+                cell.textLabel?.text = "Play: \(request.title)"
+                return cell
+            default:
+                return cell
             }
             
-            cell.textLabel?.text = "Play: \(request.title)"
-            return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("likeCell", forIndexPath: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("likeCell", forIndexPath: indexPath) as! UITableViewCell
             cell.imageView?.image = request.likes[indexPath.row].user.thumbnail
             cell.imageView?.layer.cornerRadius = 20
             cell.imageView?.layer.masksToBounds = true
@@ -102,8 +126,36 @@ class RequestTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 && indexPath.row == 2 {
-            self.performSegueWithIdentifier("showPlayer", sender: nil)
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 3:
+                // player
+                self.performSegueWithIdentifier("showPlayer", sender: nil)
+            case 2:
+                // up vote
+                if self.likes == true {
+                    println("down vote!!!")
+                    Alamofire.request(.DELETE, "\(URLS.music.rawValue)/requests/\(request.id)/unlike", parameters: ["user_access_token": self.user!.accessToken!]).responseJSON {
+                        (request, response, json, error) in
+                        let jsonValue = JSON(json!)
+                        println(jsonValue)
+                        self.request = Request(json: jsonValue["request"])
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    println("up vote1!!!")
+                    Alamofire.request(.POST, "\(URLS.music.rawValue)/requests/\(request.id)/like", parameters: ["user_access_token": self.user!.accessToken!]).responseJSON {
+                        (request, response, json, error) in
+                        let jsonValue = JSON(json!)
+                        println(jsonValue)
+                        self.request = Request(json: jsonValue["request"])
+                        self.tableView.reloadData()
+                    }
+
+                }
+            default:
+                break
+            }
         }
     }
     
@@ -151,7 +203,7 @@ class RequestTableViewController: UITableViewController {
         if let identifier = segue.identifier {
             switch identifier {
             case "showPlayer":
-                let previewPlayerVC = segue.destinationViewController as PreviewPlayerViewController
+                let previewPlayerVC = segue.destinationViewController as! PreviewPlayerViewController
                 previewPlayerVC.songUrl = request.url
                 previewPlayerVC.title = request.title
             default:

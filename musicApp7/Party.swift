@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Party {
     let id: Int
@@ -21,13 +22,16 @@ class Party {
         if party["user"] != nil {
             //self.user = User(tempUser)
             self.user = User(json: party["user"])
+        } else {
+            self.user = nil
         }
         
         if let tempRequest = party["requests"].array {
             for request in tempRequest {
                 self.requests.append(Request(json: request))
             }
+        } else {
+            self.requests = [Request]()
         }
- 
     }
 }

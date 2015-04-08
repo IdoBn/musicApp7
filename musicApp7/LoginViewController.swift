@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-//import SwiftyJson
+import SwiftyJSON
 
 class LoginViewController: UIViewController, FBLoginViewDelegate {
 
@@ -46,7 +46,15 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
                         let userJSON = JSON(json!)
                         //println(userJSON)
                         let userObj = User(json: userJSON)
+                        
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        defaults.setObject(userObj.accessToken, forKey: "user_access_token")
+                        
                         self.performSegueWithIdentifier("showMyParties", sender: userObj)
+                        
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        appDelegate.user = userObj
+                        
                         //println(userJSON["name"])
                     }
             }
@@ -68,10 +76,10 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         if let identifier = segue.identifier {
             switch identifier {
             case "showMyParties":
-                let tabController : UITabBarController = segue.destinationViewController as UITabBarController
-                let navController : UINavigationController = tabController.viewControllers?.first as UINavigationController
-                let partiesTVC = navController.viewControllers[0] as MyPartiesTableViewController
-                partiesTVC.user = sender as User
+                let tabController : UITabBarController = segue.destinationViewController as! UITabBarController
+                let navController : UINavigationController = tabController.viewControllers?.first as! UINavigationController
+                let partiesTVC = navController.viewControllers[0] as! MyPartiesTableViewController
+                partiesTVC.user = sender as! User
             default:
                 break
             }

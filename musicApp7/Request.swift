@@ -7,21 +7,22 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Request {
     
     // properties
     
-    let id: Int
-    let author: String
-    let partyId: Int
-    let thumbnail: UIImage
-    let thumbnailString: String
-    let url: String
-    let createdAt: NSDate
-    let title: String
-    let user: User?
-    let likes = [Like]()
+    var id: Int
+    var author: String
+    var partyId: Int
+    var thumbnail: UIImage!
+    var thumbnailString: String!
+    var url: String!
+    var createdAt: NSDate
+    var title: String
+    var user: User?
+    var likes = [Like]()
     
     // constructors
     
@@ -38,9 +39,12 @@ class Request {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         self.createdAt = dateFormatter.dateFromString(createdAt)!
         
-        let url1 = NSURL(string: thumbnail)
-        let data = NSData(contentsOfURL: url1!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        self.thumbnail = UIImage(data: data!)!
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
+            let url1 = NSURL(string: thumbnail)
+            let data = NSData(contentsOfURL: url1!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+            self.thumbnail = UIImage(data: data!)!
+        }
+        
         self.url = url
     }
     
@@ -54,10 +58,27 @@ class Request {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         self.createdAt = dateFormatter.dateFromString(json["created_at"].stringValue)!
         
-        self.thumbnailString = json["thumbnail"].stringValue
-        let url = NSURL(string: json["thumbnail"].stringValue)
-        let data = NSData(contentsOfURL: url!)
-        self.thumbnail = UIImage(data: data!)!
+//        self.thumbnailString = json["thumbnail"].stringValue
+//        let url = NSURL(string: json["thumbnail"].stringValue)
+//        let data = NSData(contentsOfURL: url!)
+//        self.thumbnail = UIImage(data: data!)!
+        
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
+            self.thumbnailString = json["thumbnail"].stringValue
+            let url = NSURL(string: json["thumbnail"].stringValue)
+            println("waiting for image")
+            let data = NSData(contentsOfURL: url!)
+            self.thumbnail = UIImage(data: data!)!
+        }
+        
+        
+//        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
+//            self.thumbnailString = json["thumbnail"].stringValue
+//            let url = NSURL(string: json["thumbnail"].stringValue)
+//            let data = NSData(contentsOfURL: url!)
+//            self.thumbnail = UIImage(data: data!)!
+//        }
+        
         
         if json["user"] != nil {
             self.user = User(json: json["user"])

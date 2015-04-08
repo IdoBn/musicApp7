@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJson
+import SwiftyJSON
 
 class SearchTableViewController: UITableViewController, UISearchDisplayDelegate, UISearchBarDelegate {
 
@@ -101,26 +101,29 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selected = self.searchResults[indexPath.row] as Request
         
-        let params = [
-            "request": [
-                "title" : selected.title,
-                "author": selected.author,
-                "url": selected.url,
-                "party_id": selected.partyId,
-                "thumbnail": selected.thumbnailString
-            ],
-            "user_access_token": self.user.accessToken!
-        ]
-        
-        spinner.startAnimating()
-        
-        Alamofire.request(.POST, "\(URLS.music.rawValue)/requests", parameters: params).responseJSON {
-            (request, response, json, error) in
-        
-            let jsonValue = JSON(json!)
-            self.party.requests.append(Request(json: jsonValue["request"]))
-            self.navigationController?.popViewControllerAnimated(true)
-            self.spinner.stopAnimating()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let accessToken = defaults.stringForKey("user_access_token") {
+            let params = [
+                "request": [
+                    "title" : selected.title,
+                    "author": selected.author,
+                    "url": selected.url,
+                    "party_id": selected.partyId,
+                    "thumbnail": selected.thumbnailString
+                ],
+                "user_access_token": accessToken//self.user.accessToken!
+            ]
+            
+            spinner.startAnimating()
+            
+            Alamofire.request(.POST, "\(URLS.music.rawValue)/requests", parameters: params).responseJSON {
+                (request, response, json, error) in
+                
+                let jsonValue = JSON(json!)
+                self.party.requests.append(Request(json: jsonValue["request"]))
+                self.navigationController?.popViewControllerAnimated(true)
+                self.spinner.stopAnimating()
+            }
         }
     }
     
