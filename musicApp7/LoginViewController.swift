@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
                 ]).responseJSON { (request, response, json, error) in
                     if json != nil {
                         let userJSON = JSON(json!)
-                        //println(userJSON)
+                        println(userJSON.rawString(encoding: NSUTF8StringEncoding, options: NSJSONWritingOptions.allZeros))
                         let userObj = User(json: userJSON)
                         
                         let defaults = NSUserDefaults.standardUserDefaults()

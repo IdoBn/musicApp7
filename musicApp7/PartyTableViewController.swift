@@ -9,16 +9,51 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import PusherSwift
 
 class PartyTableViewController: UITableViewController {
 
     var party: Party?
     var user: User?
+    var pusherClient: Pusher!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = self.party?.name
+        
+        // setting up pusher
+        self.pusherClient = Pusher(key: "27aa526da1424bb735a4", encrypted: false, authEndpoint: nil)
+        var pusherChannel = self.pusherClient.subscribe("\(self.party!.id)") as PusherChannel
+        
+        pusherChannel.bind("request_liked", callback: { (json) -> Void in
+            println("request_liked")
+            println(json)
+        })
+        
+        pusherChannel.bind("request_unliked", callback: { (json) -> Void in
+            println("request_unliked")
+            println(json)
+        })
+        
+        pusherChannel.bind("request_created", callback: { (json) -> Void in
+            println("request_created")
+            println(json)
+        })
+        
+        pusherChannel.bind("request_played", callback: { (json) -> Void in
+            println("request_played")
+            println(json)
+        })
+        
+        pusherChannel.bind("request_destroyed", callback: { (json) -> Void in
+            println("request_destroyed")
+            println(json)
+        })
+        
+        self.pusherClient.connect()
+        // done setting up pusher
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
