@@ -30,21 +30,25 @@ class PartyTableViewController: UITableViewController {
             println("request_liked")
             println(json)
             
-            
-//            [self.tableView beginUpdates];
-//            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
-//            [self.tableView endUpdates];
-            
-
-            
-            //[_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-            //let indexSet = NSIndexSet(index: 0)
-            //self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.beginUpdates()
+            //self.party?.requests.append(Request(json: json))
+            self.setUp()
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
         })
         
         pusherChannel.bind("request_unliked", callback: { (json) -> Void in
             println("request_unliked")
             println(json)
+            
+            self.tableView.beginUpdates()
+            //self.party?.requests.append(Request(json: json))
+            self.setUp()
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
+            
         })
         
         pusherChannel.bind("request_created", callback: { (json) -> Void in
@@ -114,6 +118,7 @@ class PartyTableViewController: UITableViewController {
     
     func setUp() {
         if let partyId = self.party?.id {
+            self.refreshControl?.beginRefreshing()
             Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(partyId)").responseJSON {
                 (request, response, json, error) in
                 let jsonValue = JSON(json!)
