@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C67E0BF0864039144ADFE91A"
-               BuildableName = "Pods_musicApp7.framework"
-               BlueprintName = "Pods-musicApp7"
+               BlueprintIdentifier = "10AD42EB0D844E2E64D412DF"
+               BuildableName = "Starscream.framework"
+               BlueprintName = "Pods-musicApp7-Starscream"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

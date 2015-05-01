@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-musicApp7-PusherSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-musicApp7-Starscream.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-musicApp7-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>48B22D341C8AF52BD349760B</key>
+		<key>09AA5B03CD8C74A571B1F71E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93627FDB5C130ED238B0E359</key>
+		<key>10AD42EB0D844E2E64D412DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBC4D0AA73C293E63347C9E3</key>
+		<key>3564C517F5E25BDCB7E10D06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C67E0BF0864039144ADFE91A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3C5E6A827D5C7228836EE9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

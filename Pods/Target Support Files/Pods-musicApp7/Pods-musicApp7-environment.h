@@ -12,6 +12,18 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 1
 #define COCOAPODS_VERSION_PATCH_Alamofire 4
 
+// PusherSwift
+#define COCOAPODS_POD_AVAILABLE_PusherSwift
+#define COCOAPODS_VERSION_MAJOR_PusherSwift 0
+#define COCOAPODS_VERSION_MINOR_PusherSwift 1
+#define COCOAPODS_VERSION_PATCH_PusherSwift 0
+
+// Starscream
+#define COCOAPODS_POD_AVAILABLE_Starscream
+#define COCOAPODS_VERSION_MAJOR_Starscream 0
+#define COCOAPODS_VERSION_MINOR_Starscream 9
+#define COCOAPODS_VERSION_PATCH_Starscream 2
+
 // SwiftyJSON
 #define COCOAPODS_POD_AVAILABLE_SwiftyJSON
 #define COCOAPODS_VERSION_MAJOR_SwiftyJSON 2

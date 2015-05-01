@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C67E0BF0864039144ADFE91A"
-               BuildableName = "Pods_musicApp7.framework"
-               BlueprintName = "Pods-musicApp7"
+               BlueprintIdentifier = "09AA5B03CD8C74A571B1F71E"
+               BuildableName = "PusherSwift.framework"
+               BlueprintName = "Pods-musicApp7-PusherSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

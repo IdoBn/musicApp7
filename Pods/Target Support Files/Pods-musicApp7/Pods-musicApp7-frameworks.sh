@@ -49,9 +49,13 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'PusherSwift.framework'
+  install_framework 'Starscream.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'PusherSwift.framework'
+  install_framework 'Starscream.framework'
   install_framework 'SwiftyJSON.framework'
 fi

@@ -8,7 +8,7 @@ platform :ios, '8.0'
 target 'musicApp7' do
     pod 'SwiftyJSON'
     pod 'Alamofire', :git => "https://github.com/Alamofire/Alamofire/", :branch => "xcode-6.3"
-#    pod 'libPusher', '~> 1.5'
+    pod 'PusherSwift', :git => "https://github.com/pusher/pusher-swift-ws"
 	use_frameworks!
 end
 
