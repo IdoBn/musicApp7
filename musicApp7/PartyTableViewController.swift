@@ -29,6 +29,17 @@ class PartyTableViewController: UITableViewController {
         pusherChannel.bind("request_liked", callback: { (json) -> Void in
             println("request_liked")
             println(json)
+            
+            
+//            [self.tableView beginUpdates];
+//            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+//            [self.tableView endUpdates];
+            
+
+            
+            //[_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+            //let indexSet = NSIndexSet(index: 0)
+            //self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
         })
         
         pusherChannel.bind("request_unliked", callback: { (json) -> Void in
@@ -39,6 +50,12 @@ class PartyTableViewController: UITableViewController {
         pusherChannel.bind("request_created", callback: { (json) -> Void in
             println("request_created")
             println(json)
+            
+            self.tableView.beginUpdates()
+            self.party?.requests.append(Request(json: json))
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
         })
         
         pusherChannel.bind("request_played", callback: { (json) -> Void in
@@ -49,6 +66,29 @@ class PartyTableViewController: UITableViewController {
         pusherChannel.bind("request_destroyed", callback: { (json) -> Void in
             println("request_destroyed")
             println(json)
+            
+            self.tableView.beginUpdates()
+            let request = Request(json: json)
+            
+            
+            var index: Int? = nil
+            
+            if self.party?.requests != nil {
+                for (i, r) in enumerate(self.party!.requests) {
+                    if r.id == request.id {
+                        index = i
+                    }
+                }
+            }
+            
+            if let indexC = index {
+                self.party?.requests.removeAtIndex(index!)
+            }
+        
+            
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
         })
         
         self.pusherClient.connect()
