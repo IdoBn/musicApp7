@@ -31,7 +31,6 @@ class PartyTableViewController: UITableViewController {
             println(json)
             
             self.tableView.beginUpdates()
-            //self.party?.requests.append(Request(json: json))
             self.setUp()
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
@@ -43,7 +42,6 @@ class PartyTableViewController: UITableViewController {
             println(json)
             
             self.tableView.beginUpdates()
-            //self.party?.requests.append(Request(json: json))
             self.setUp()
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
@@ -74,7 +72,6 @@ class PartyTableViewController: UITableViewController {
             self.tableView.beginUpdates()
             let request = Request(json: json)
             
-            
             var index: Int? = nil
             
             if self.party?.requests != nil {
@@ -89,7 +86,6 @@ class PartyTableViewController: UITableViewController {
                 self.party?.requests.removeAtIndex(index!)
             }
         
-            
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
             self.tableView.endUpdates()

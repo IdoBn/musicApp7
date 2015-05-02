@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import AVFoundation
 import AVKit
+import PusherSwift
 
 class PartyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayerViewDelegate {
 
@@ -23,12 +24,84 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var party: Party?
     var user: User?
+    var pusherClient: Pusher!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = self.party?.name
+        
+        // pusher
+        
+        pusherClient = Pusher(key: "27aa526da1424bb735a4", encrypted: false, authEndpoint: nil)
+        var pusherChannel = pusherClient.subscribe("\(self.party!.id)") as PusherChannel
+        
+        pusherChannel.bind("request_liked", callback: { (json) -> Void in
+            println("request_liked")
+            println(json)
+            self.tableView.beginUpdates()
+            self.setUp()
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
+
+        })
+        
+        pusherChannel.bind("request_unliked", callback: { (json) -> Void in
+            println("request_unliked")
+            println(json)
+            
+            self.tableView.beginUpdates()
+            self.setUp()
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
+        })
+        
+        pusherChannel.bind("request_created", callback: { (json) -> Void in
+            println("request_created")
+            println(json)
+            
+            self.tableView.beginUpdates()
+            self.party?.requests.append(Request(json: json))
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
+        })
+        
+        pusherChannel.bind("request_played", callback: { (json) -> Void in
+            println("request_played")
+            println(json)
+        })
+        
+        pusherChannel.bind("request_destroyed", callback: { (json) -> Void in
+            println("request_destroyed")
+            println(json)
+            
+            self.tableView.beginUpdates()
+            let request = Request(json: json)
+            
+            var index: Int? = nil
+            
+            if self.party?.requests != nil {
+                for (i, r) in enumerate(self.party!.requests) {
+                    if r.id == request.id {
+                        index = i
+                    }
+                }
+            }
+            
+            if let indexC = index {
+                self.party?.requests.removeAtIndex(index!)
+            }
+            
+            let indexSet = NSIndexSet(index: 0)
+            self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
+            self.tableView.endUpdates()
+        })
+        
+        self.pusherClient.connect()
         
         // setup player delegate
         self.playerView.delegate = self
@@ -57,6 +130,7 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func setUp() {
         if let partyId = self.party?.id {
+            self.refreshControl?.beginRefreshing()
             Alamofire.request(.GET, "\(URLS.music.rawValue)/parties/\(partyId)").responseJSON {
                 (request, response, json, error) in
                 let jsonValue = JSON(json!)
