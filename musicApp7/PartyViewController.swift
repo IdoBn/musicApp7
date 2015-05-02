@@ -65,6 +65,9 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             self.tableView.beginUpdates()
             self.party?.requests.append(Request(json: json))
+            if self.party?.requests.count == 1 {
+                self.playerView.reDraw()
+            }
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
             self.tableView.endUpdates()
@@ -93,12 +96,18 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             
             if let indexC = index {
-                self.party?.requests.removeAtIndex(index!)
+                if self.party?.requests[indexC].id == request.id {
+                    self.party?.requests.removeAtIndex(indexC)
+                }
             }
             
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
             self.tableView.endUpdates()
+            
+//            if self.party?.requests.count > 0 {
+//                self.playerView.reDraw()
+//            }
         })
         
         self.pusherClient.connect()
@@ -245,8 +254,10 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
                     (request, response, json, error) in
                     let jsonValue = JSON(json!)
                     println("removeing table view cell")
-                    self.party?.requests.removeAtIndex(indexPath.row)
-                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    if self.party?.requests.count > indexPath.row {
+                        self.party?.requests.removeAtIndex(indexPath.row)
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    }
                     
                     if indexPath.row == 0 {
                         self.playerView.reDraw()
