@@ -39,10 +39,10 @@ class Request {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         self.createdAt = dateFormatter.dateFromString(createdAt)!
         
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
-            let url1 = NSURL(string: thumbnail)
-            let data = NSData(contentsOfURL: url1!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-            self.thumbnail = UIImage(data: data!)!
+        //let url1 = NSURL(string: thumbnail)
+        
+        UIImage.loadFromURL(thumbnail) { (image) -> Void in
+            self.thumbnail = image
         }
         
         self.url = url
@@ -63,12 +63,13 @@ class Request {
 //        let data = NSData(contentsOfURL: url!)
 //        self.thumbnail = UIImage(data: data!)!
         
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
-            self.thumbnailString = json["thumbnail"].stringValue
-            let url = NSURL(string: json["thumbnail"].stringValue)
-            println("waiting for image")
-            let data = NSData(contentsOfURL: url!)
-            self.thumbnail = UIImage(data: data!)!
+        self.thumbnailString = json["thumbnail"].stringValue
+        let url = NSURL(string: json["thumbnail"].stringValue)
+        
+        self.thumbnail = UIImage(named: "placeholder")
+        
+        UIImage.loadFromURL(thumbnailString) { (image) -> Void in
+            self.thumbnail = image
         }
         
         

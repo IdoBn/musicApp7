@@ -3,5 +3,3 @@
 //
 
 #import <FacebookSDK/FacebookSDK.h>
-#import <Pusher/Pusher.h>
-#import <Pusher/PTPusherEventDispatcher.h>

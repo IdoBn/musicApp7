@@ -89,7 +89,12 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
         
         let request = self.searchResults[indexPath.row]
         // Configure the cell...
-        cell!.imageView?.image = request.thumbnail
+        //cell!.imageView?.image = request.thumbnail
+        let url = NSURL(string: request.thumbnailString)
+        let placeholderImg = UIImage(named: "placeholder")
+        if url != nil {
+            cell!.imageView?.setImageWithUrl(url!, placeHolderImage: placeholderImg)
+        }
         // title
         cell!.textLabel!.text = request.title
         // by user name

@@ -64,7 +64,9 @@ class RequestTableViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                cell.imageView?.image = request.user!.thumbnail
+                if let requestUserThumbnail = request.user?.thumbnail {
+                    cell.imageView?.image = requestUserThumbnail
+                }
                 cell.imageView?.layer.cornerRadius = 25
                 cell.imageView?.layer.masksToBounds = true
                 

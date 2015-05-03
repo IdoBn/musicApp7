@@ -6,6 +6,26 @@
 //  Copyright (c) 2015 Ido Ben-Natan. All rights reserved.
 //
 
+
+extension UIImage {
+    // Loads image asynchronously
+    class func loadFromURL(url: String, callback: (UIImage)->Void) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
+            let nsUrl = NSURL(string: url)
+            if nsUrl != nil {
+                let imageData = NSData(contentsOfURL: nsUrl!)
+                if let data = imageData {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let image = UIImage(data: data) {
+                            callback(image)
+                        }
+                    })
+                }
+            }
+        })
+    }
+}
+
 import Foundation
 import SwiftyJSON
 
@@ -50,15 +70,9 @@ class User {
         }
         
         if let thumbnail = json["thumbnail"].string {
-            let url = NSURL(string: thumbnail)
-            let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-            self.thumbnail = UIImage(data: data!)!
-            
-            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { () -> Void in
-                let largeUrl = NSURL(string: thumbnail + "?type=large")
-                println("waiting for image")
-                let largeData = NSData(contentsOfURL: largeUrl!)
-                self.largeThumbnail = UIImage(data: largeData!)!
+            //let largeUrl = NSURL(string: thumbnail + "?type=large")
+            UIImage.loadFromURL(thumbnail) { (image) -> Void in
+                self.largeThumbnail = image
             }
         }
         
@@ -77,4 +91,3 @@ class User {
     }
     
 }
-
