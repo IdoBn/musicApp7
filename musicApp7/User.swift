@@ -37,6 +37,7 @@ class User {
     var thumbnail: UIImage?
     var largeThumbnail: UIImage?
     var accessToken: String?
+    var url: NSURL
     
     // constructor
     
@@ -51,6 +52,8 @@ class User {
         let url = NSURL(string: thumbnail)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         self.thumbnail = UIImage(data: data!)!
+        
+        self.url = NSURL(string: thumbnail + "?type=large")!
         
         let largeUrl = NSURL(string: thumbnail + "?type=large")
         let largeData = NSData(contentsOfURL: largeUrl!)
@@ -69,8 +72,11 @@ class User {
             self.email = email
         }
         
+        self.url = NSURL(string: json["thumbnail"].stringValue + "?type=large")!
+        
         if let thumbnail = json["thumbnail"].string {
-            //let largeUrl = NSURL(string: thumbnail + "?type=large")
+            let largeUrl = NSURL(string: thumbnail + "?type=large")
+            
             UIImage.loadFromURL(thumbnail) { (image) -> Void in
                 self.largeThumbnail = image
             }

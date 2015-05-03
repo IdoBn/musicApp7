@@ -64,10 +64,12 @@ class RequestTableViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                if let requestUserThumbnail = request.user?.thumbnail {
-                    cell.imageView?.image = requestUserThumbnail
+                if let url = request.user?.url {
+                    let placeholder = UIImage(named:"mark")
+                    cell.imageView?.setImageWithUrl(url, placeHolderImage: placeholder)
                 }
-                cell.imageView?.layer.cornerRadius = 25
+                
+                cell.imageView?.layer.cornerRadius = 30
                 cell.imageView?.layer.masksToBounds = true
                 
                 cell.textLabel?.text = request.user!.name
