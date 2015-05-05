@@ -65,11 +65,11 @@ class RequestTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 if let url = request.user?.url {
-                    let placeholder = UIImage(named:"mark")
+                    let placeholder = UIImage(named:"defaultUser")
                     cell.imageView?.setImageWithUrl(url, placeHolderImage: placeholder)
                 }
                 
-                cell.imageView?.layer.cornerRadius = 30
+                cell.imageView?.layer.cornerRadius = 25
                 cell.imageView?.layer.masksToBounds = true
                 
                 cell.textLabel?.text = request.user!.name
@@ -96,7 +96,8 @@ class RequestTableViewController: UITableViewController {
             
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("likeCell", forIndexPath: indexPath) as! UITableViewCell
-            cell.imageView?.image = request.likes[indexPath.row].user.thumbnail
+            let placeholder = UIImage(named:"defaultUser")
+            cell.imageView?.setImageWithUrl(request.likes[indexPath.row].user.url, placeHolderImage: placeholder)
             cell.imageView?.layer.cornerRadius = 20
             cell.imageView?.layer.masksToBounds = true
             cell.textLabel?.text = request.likes[indexPath.row].user.name

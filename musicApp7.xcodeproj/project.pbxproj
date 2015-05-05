@@ -14,7 +14,6 @@
 		0065AB7D1A92606F000D9848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AB7C1A92606F000D9848 /* AppDelegate.swift */; };
 		0065AB7F1A92606F000D9848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AB7E1A92606F000D9848 /* LoginViewController.swift */; };
 		0065AB821A92606F000D9848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0065AB801A92606F000D9848 /* Main.storyboard */; };
-		0065AB841A92606F000D9848 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0065AB831A92606F000D9848 /* Images.xcassets */; };
 		0065AB871A92606F000D9848 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0065AB851A92606F000D9848 /* LaunchScreen.xib */; };
 		0065AB931A92606F000D9848 /* musicApp7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AB921A92606F000D9848 /* musicApp7Tests.swift */; };
 		00716BCA1A9BB7D500338FC4 /* PreviewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00716BC91A9BB7D500338FC4 /* PreviewPlayerViewController.swift */; };
@@ -26,6 +25,7 @@
 		00B5215E1A94D3DA00F28EC8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B5215D1A94D3DA00F28EC8 /* PlayerView.swift */; };
 		00B526D11A96690E00F28EC8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B526D01A96690E00F28EC8 /* SearchTableViewController.swift */; };
 		00B83B7F1AF64FF800511DA0 /* UIImageView+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B83B7E1AF64FF800511DA0 /* UIImageView+Alamofire.swift */; };
+		00B8B5911AF7C880004DD33D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B8B5901AF7C880004DD33D /* Images.xcassets */; };
 		00DBDD711A94C2A9009F88DD /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DBDD701A94C2A9009F88DD /* PartyViewController.swift */; };
 		00FBCBD31A97DFD80057DFF7 /* RequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBCBD21A97DFD80057DFF7 /* RequestTableViewController.swift */; };
 		491E1AB4A612A94BFC337DC0 /* Pods_musicApp7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33C1369F1F277A3901774EF /* Pods_musicApp7.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -64,7 +64,6 @@
 		0065AB7C1A92606F000D9848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0065AB7E1A92606F000D9848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0065AB811A92606F000D9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0065AB831A92606F000D9848 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0065AB861A92606F000D9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0065AB8C1A92606F000D9848 /* musicApp7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicApp7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0065AB911A92606F000D9848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		00B5215D1A94D3DA00F28EC8 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		00B526D01A96690E00F28EC8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		00B83B7E1AF64FF800511DA0 /* UIImageView+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Alamofire.swift"; sourceTree = "<group>"; };
+		00B8B5901AF7C880004DD33D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		00DBDD701A94C2A9009F88DD /* PartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 		00FBCBD21A97DFD80057DFF7 /* RequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTableViewController.swift; sourceTree = "<group>"; };
 		0BDA6265F2900F4B2417EDE4 /* Pods-musicApp7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicApp7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musicApp7/Pods-musicApp7.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 		0065AB7A1A92606F000D9848 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00B8B5901AF7C880004DD33D /* Images.xcassets */,
 				0065AB851A92606F000D9848 /* LaunchScreen.xib */,
-				0065AB831A92606F000D9848 /* Images.xcassets */,
 				00A9DA8C1A926277003A41B9 /* musicApp7-Bridging-Header.h */,
 				0065AB7C1A92606F000D9848 /* AppDelegate.swift */,
 				0065AB7B1A92606F000D9848 /* Info.plist */,
@@ -318,9 +318,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B8B5911AF7C880004DD33D /* Images.xcassets in Resources */,
 				0065AB821A92606F000D9848 /* Main.storyboard in Resources */,
 				0065AB871A92606F000D9848 /* LaunchScreen.xib in Resources */,
-				0065AB841A92606F000D9848 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

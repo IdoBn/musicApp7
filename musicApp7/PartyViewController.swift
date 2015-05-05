@@ -238,7 +238,7 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             // Configure the cell...
             //cell.imageView?.image = request.thumbnail
             let url = NSURL(string: request.thumbnailString)
-            let placeholderImg = UIImage(named: "placeholder")
+            let placeholderImg = UIImage(named: "defaultSong")
             if url != nil {
                 cell.imageView?.setImageWithUrl(url!, placeHolderImage: placeholderImg)
             }
