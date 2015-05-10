@@ -47,15 +47,18 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
             (request, response, json, error) in
             let jsonValue = JSON(json!)
             
-            if let jsonArray = jsonValue["videos"].array {
+            println(jsonValue)
+            
+            if let jsonArray = jsonValue["items"].array {
                 
                 self.searchResults = []
                 
                 for jsonReq in jsonArray {
-                    let author = jsonReq["author"]["name"].stringValue
-                    let thumbnail = jsonReq["thumbnails"][0]["url"].stringValue
-                    let title = jsonReq["title"].stringValue
-                    let url = jsonReq["player_url"].stringValue
+                    let author = jsonReq["snippet"]["channelTitle"].stringValue
+                    let thumbnail = jsonReq["snippet"]["thumbnails"]["default"]["url"].stringValue
+                    let title = jsonReq["snippet"]["title"].stringValue
+                    var url = jsonReq["id"]["videoId"].stringValue
+                    url = "http://www.youtube.com/watch?v=\(url)"
                     
                     self.searchResults.append(Request(id: 0, author: author, partyId: self.party.id, thumbnail: thumbnail, url: url, createdAt: "2015-01-24T19:00:05.875Z", title: title, user: nil, likes: [Like]()))
                 }

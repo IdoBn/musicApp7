@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import PusherSwift
-import Haneke
 
 class PartyTableViewController: UITableViewController {
 
@@ -55,7 +54,7 @@ class PartyTableViewController: UITableViewController {
             println(json)
             
             self.tableView.beginUpdates()
-            self.party?.requests.append(Request(json: json))
+            self.party?.requests.append(Request(json: json["request"]))
             let indexSet = NSIndexSet(index: 0)
             self.tableView.reloadSections(indexSet, withRowAnimation: .Fade)
             self.tableView.endUpdates()
@@ -71,7 +70,7 @@ class PartyTableViewController: UITableViewController {
             println(json)
             
             self.tableView.beginUpdates()
-            let request = Request(json: json)
+            let request = Request(json: json["request"])
             
             var index: Int? = nil
             
@@ -157,9 +156,7 @@ class PartyTableViewController: UITableViewController {
             let url = NSURL(string: request.thumbnailString)
             let placeholderImg = UIImage(named: "defaultSong")
             if url != nil {
-                cell.imageView?.hnk_setImageFromURL(url!, format: Format<UIImage>(name: "original"), success: { (image) -> () in
-                    cell.imageView?.image = image
-                })
+                cell.imageView?.setImageWithUrl(url!, placeHolderImage: placeholderImg)
             }
             // title
             cell.textLabel!.text = request.title

@@ -64,7 +64,7 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             println(json)
             
             self.tableView.beginUpdates()
-            self.party?.requests.append(Request(json: json))
+            self.party?.requests.append(Request(json: json["request"]))
             if self.party?.requests.count == 1 {
                 self.playerView.reDraw()
             }
@@ -83,7 +83,7 @@ class PartyViewController: UIViewController, UITableViewDataSource, UITableViewD
             println(json)
             
             self.tableView.beginUpdates()
-            let request = Request(json: json)
+            let request = Request(json: json["request"])
             
             let checkFirst = self.party?.requests.first?.id == request.id
             
